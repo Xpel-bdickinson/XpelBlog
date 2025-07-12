@@ -6,3 +6,34 @@ theme: PaperMod
 caches:
   images:
     dir: :cacheDir/images
+
+
+menu:
+  main:
+    - name: xpelcyber.com
+      url: https://xpelcyber.com/
+      weight: 10
+    - name: Search
+      url: search/
+      weight: 20
+
+params:
+  homeInfoParams:
+    Title: Xpel Cyber Blog
+    Content: This is a blog for the Xpel Cyber team.
+
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    # limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
+    keys: ["title", "permalink", "summary", "content"]
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # necessary for search
